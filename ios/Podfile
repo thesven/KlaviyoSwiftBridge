@@ -31,6 +31,9 @@ target 'KlaviyoSwiftBridge' do
   # Flags change depending on the env values.
   flags = get_default_flags()
 
+  # Pods to be used in project
+  pod 'KlaviyoSwift'
+
   use_react_native!(
     :path => config[:reactNativePath],
     # Hermes is now enabled by default. Disable by setting this flag to false.
@@ -48,6 +51,7 @@ target 'KlaviyoSwiftBridge' do
   target 'KlaviyoSwiftBridgeTests' do
     inherit! :complete
     # Pods for testing
+    pod 'KlaviyoSwift'
   end
 
   post_install do |installer|
