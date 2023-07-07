@@ -11,9 +11,24 @@ import KlaviyoSwift
 @objc(KlaviyoSDKBridge)
 class KlaviyoSDKBridge : NSObject {
   
-  @objc func initialize(apiKey:String) {
-    Klaviyo.setupWithPublicAPIKey(apiKey: apiKey)
+  @objc func initialize(_ apiKey:String) {
+    KlaviyoSDK().initialize(with: apiKey)
     print("Klaviyo Init")
+  }
+  
+  @objc func setEmail(_ address:String) {
+    print("KlaviyoSDKBridge :: setEmail :: ", address)
+    KlaviyoSDK().set(email: address)
+  }
+  
+  @objc func callEvent(_ eventName:String, properties:[String : Any]?) {
+    if let properties = properties {
+      KlaviyoSDK().create(event: .init(name: .CustomEvent(eventName), properties: properties))
+    } else {
+      print("KlaviyoSDKBridge :: callEvent :: Custom Event With Name")
+      KlaviyoSDK().create(event: .init(name: .CustomEvent(eventName)))
+    }
+    
   }
   
   @objc func constantsToExport() -> [AnyHashable : Any]! {

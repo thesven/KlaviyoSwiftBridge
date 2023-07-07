@@ -15,10 +15,10 @@
   self.initialProps = @{};
   
   // Create an instance of KlaviyoSDKBridge and call initialize on it.
-  NSString *apiKey = [RNCConfig envFor:@"KLAVIYO_API_KEY"];
-  NSLog(apiKey);
-  KlaviyoSDKBridge *klaviyoBridge = [[KlaviyoSDKBridge alloc] init];
-  [klaviyoBridge initializeWithApiKey:apiKey];
+  //NSString *apiKey = [RNCConfig envFor:@"KLAVIYO_API_KEY"];
+  //NSLog(@"%@", apiKey);
+  //KlaviyoSDKBridge *klaviyoBridge = [[KlaviyoSDKBridge alloc] init];
+  //[klaviyoBridge initializeWithApiKey:apiKey];
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }

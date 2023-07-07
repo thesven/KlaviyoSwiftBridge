@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* KlaviyoSwiftBridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* KlaviyoSwiftBridgeTests.m */; };
-		077FCF556344B878CE712F9C /* libPods-KlaviyoSwiftBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 893FF1A82B8B3D83686459A5 /* libPods-KlaviyoSwiftBridge.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3E6061535466DCF76EB3E0A5 /* libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E18E2683256B4FBBE21DE9 /* libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8555BF1A065182518EEB11F1 /* libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2CEBA552E8944D559D16F04 /* libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a */; };
 		966FC0032A577EAC005604BD /* KlaviyoSDKBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FC0022A577EAC005604BD /* KlaviyoSDKBridge.swift */; };
 		966FC0042A577EAC005604BD /* KlaviyoSDKBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FC0022A577EAC005604BD /* KlaviyoSDKBridge.swift */; };
 		966FC0062A577F2F005604BD /* KlaviyoSDKBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 966FC0052A577F2F005604BD /* KlaviyoSDKBridge.m */; };
 		966FC0072A577F2F005604BD /* KlaviyoSDKBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 966FC0052A577F2F005604BD /* KlaviyoSDKBridge.m */; };
+		A09441D359D7611BDAFB4641 /* libPods-KlaviyoSwiftBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4AB597536A3198346CBF4C /* libPods-KlaviyoSwiftBridge.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,25 +48,25 @@
 		00E356EE1AD99517003FC87E /* KlaviyoSwiftBridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KlaviyoSwiftBridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* KlaviyoSwiftBridgeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KlaviyoSwiftBridgeTests.m; sourceTree = "<group>"; };
-		12965DC98E48265B27B288FA /* Pods-KlaviyoSwiftBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlaviyoSwiftBridge.release.xcconfig"; path = "Target Support Files/Pods-KlaviyoSwiftBridge/Pods-KlaviyoSwiftBridge.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* KlaviyoSwiftBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KlaviyoSwiftBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = KlaviyoSwiftBridge/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = KlaviyoSwiftBridge/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = KlaviyoSwiftBridge/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = KlaviyoSwiftBridge/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = KlaviyoSwiftBridge/main.m; sourceTree = "<group>"; };
-		37FE5E75B8483FBD1EE739E5 /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.release.xcconfig"; path = "Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.release.xcconfig"; sourceTree = "<group>"; };
-		696581CA6415E9F126141EC5 /* Pods-KlaviyoSwiftBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlaviyoSwiftBridge.debug.xcconfig"; path = "Target Support Files/Pods-KlaviyoSwiftBridge/Pods-KlaviyoSwiftBridge.debug.xcconfig"; sourceTree = "<group>"; };
+		21BFA675626B2C172EA03419 /* Pods-KlaviyoSwiftBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlaviyoSwiftBridge.release.xcconfig"; path = "Target Support Files/Pods-KlaviyoSwiftBridge/Pods-KlaviyoSwiftBridge.release.xcconfig"; sourceTree = "<group>"; };
+		57E18E2683256B4FBBE21DE9 /* libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E4AB597536A3198346CBF4C /* libPods-KlaviyoSwiftBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KlaviyoSwiftBridge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = KlaviyoSwiftBridge/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		893FF1A82B8B3D83686459A5 /* libPods-KlaviyoSwiftBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KlaviyoSwiftBridge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		966FC0002A577EAB005604BD /* KlaviyoSwiftBridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KlaviyoSwiftBridge-Bridging-Header.h"; sourceTree = "<group>"; };
 		966FC0012A577EAB005604BD /* KlaviyoSwiftBridgeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KlaviyoSwiftBridgeTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		966FC0022A577EAC005604BD /* KlaviyoSDKBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlaviyoSDKBridge.swift; sourceTree = "<group>"; };
 		966FC0052A577F2F005604BD /* KlaviyoSDKBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KlaviyoSDKBridge.m; sourceTree = "<group>"; };
 		96AED1122A57B17F00118070 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
-		A9AAB1F71B04C7C2B2C97324 /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig"; path = "Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C2CEBA552E8944D559D16F04 /* libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC56907AE37C3FA280364753 /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig"; path = "Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D6AF52059609AF3DDF4D5208 /* Pods-KlaviyoSwiftBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlaviyoSwiftBridge.debug.xcconfig"; path = "Target Support Files/Pods-KlaviyoSwiftBridge/Pods-KlaviyoSwiftBridge.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F8C94920FC9616B8CDCEB52F /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.release.xcconfig"; path = "Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8555BF1A065182518EEB11F1 /* libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a in Frameworks */,
+				3E6061535466DCF76EB3E0A5 /* libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				077FCF556344B878CE712F9C /* libPods-KlaviyoSwiftBridge.a in Frameworks */,
+				A09441D359D7611BDAFB4641 /* libPods-KlaviyoSwiftBridge.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				893FF1A82B8B3D83686459A5 /* libPods-KlaviyoSwiftBridge.a */,
-				C2CEBA552E8944D559D16F04 /* libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a */,
+				7E4AB597536A3198346CBF4C /* libPods-KlaviyoSwiftBridge.a */,
+				57E18E2683256B4FBBE21DE9 /* libPods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -177,10 +177,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				696581CA6415E9F126141EC5 /* Pods-KlaviyoSwiftBridge.debug.xcconfig */,
-				12965DC98E48265B27B288FA /* Pods-KlaviyoSwiftBridge.release.xcconfig */,
-				A9AAB1F71B04C7C2B2C97324 /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig */,
-				37FE5E75B8483FBD1EE739E5 /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.release.xcconfig */,
+				D6AF52059609AF3DDF4D5208 /* Pods-KlaviyoSwiftBridge.debug.xcconfig */,
+				21BFA675626B2C172EA03419 /* Pods-KlaviyoSwiftBridge.release.xcconfig */,
+				CC56907AE37C3FA280364753 /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig */,
+				F8C94920FC9616B8CDCEB52F /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -192,12 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "KlaviyoSwiftBridgeTests" */;
 			buildPhases = (
-				60204FA10B26F50986AE129D /* [CP] Check Pods Manifest.lock */,
+				93AB70CACF378767C829ED7B /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				500EF95304FB8CE865E6482D /* [CP] Embed Pods Frameworks */,
-				58A23ECC4ADEA5CD88996B12 /* [CP] Copy Pods Resources */,
+				790A5B8030C288F09883A520 /* [CP] Embed Pods Frameworks */,
+				EED3E9EB379D9C9A6082CFD5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,14 +213,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "KlaviyoSwiftBridge" */;
 			buildPhases = (
-				B2FCDCD14DD5752BBD3EDF65 /* [CP] Check Pods Manifest.lock */,
+				8344C5D13AD28696779961CC /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				56A5233B1C46809246BE3F56 /* [CP] Embed Pods Frameworks */,
-				81FF73FDCC6E71DEAC2F9400 /* [CP] Copy Pods Resources */,
+				19A573D35FB0B94E70A61AFE /* [CP] Embed Pods Frameworks */,
+				D5245C5E2294CECE9B782B92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,24 +329,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		500EF95304FB8CE865E6482D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		56A5233B1C46809246BE3F56 /* [CP] Embed Pods Frameworks */ = {
+		19A573D35FB0B94E70A61AFE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,24 +346,46 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge/Pods-KlaviyoSwiftBridge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		58A23ECC4ADEA5CD88996B12 /* [CP] Copy Pods Resources */ = {
+		790A5B8030C288F09883A520 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60204FA10B26F50986AE129D /* [CP] Check Pods Manifest.lock */ = {
+		8344C5D13AD28696779961CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KlaviyoSwiftBridge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93AB70CACF378767C829ED7B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -402,7 +407,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		81FF73FDCC6E71DEAC2F9400 /* [CP] Copy Pods Resources */ = {
+		D5245C5E2294CECE9B782B92 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,26 +424,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge/Pods-KlaviyoSwiftBridge-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B2FCDCD14DD5752BBD3EDF65 /* [CP] Check Pods Manifest.lock */ = {
+		EED3E9EB379D9C9A6082CFD5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KlaviyoSwiftBridge-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -497,7 +497,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9AAB1F71B04C7C2B2C97324 /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig */;
+			baseConfigurationReference = CC56907AE37C3FA280364753 /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -529,7 +529,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37FE5E75B8483FBD1EE739E5 /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.release.xcconfig */;
+			baseConfigurationReference = F8C94920FC9616B8CDCEB52F /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,7 +557,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 696581CA6415E9F126141EC5 /* Pods-KlaviyoSwiftBridge.debug.xcconfig */;
+			baseConfigurationReference = D6AF52059609AF3DDF4D5208 /* Pods-KlaviyoSwiftBridge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -611,6 +611,7 @@
 					"${PODS_ROOT}/Headers/Public/KlaviyoSwift",
 				);
 				INFOPLIST_FILE = KlaviyoSwiftBridge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -632,7 +633,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12965DC98E48265B27B288FA /* Pods-KlaviyoSwiftBridge.release.xcconfig */;
+			baseConfigurationReference = 21BFA675626B2C172EA03419 /* Pods-KlaviyoSwiftBridge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -685,6 +686,7 @@
 					"${PODS_ROOT}/Headers/Public/KlaviyoSwift",
 				);
 				INFOPLIST_FILE = KlaviyoSwiftBridge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

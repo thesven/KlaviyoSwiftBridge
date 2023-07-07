@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -65,6 +65,12 @@ function Section({children, title}: SectionProps): JSX.Element {
 }
 
 function App(): JSX.Element {
+  useEffect(() => {
+    // Put your code here. It will be executed when the component is initially loaded.
+    NativeModules.KlaviyoSDKBridge.initialize(Config.KLAVIYO_API_KEY);
+    NativeModules.KlaviyoSDKBridge.setEmail("mike.svend@gmail.com");
+    //NativeModules.KlaviyoSDKBridge.callEvent("Opened Application")
+  }, []); 
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {

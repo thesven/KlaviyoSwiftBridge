@@ -5,7 +5,7 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
-platform :ios, min_ios_version_supported
+platform :ios, '13.0'
 prepare_react_native_project!
 
 # If you are using a `react-native-flipper` your iOS build will fail when `NO_FLIPPER=1` is set.
@@ -32,7 +32,7 @@ target 'KlaviyoSwiftBridge' do
   flags = get_default_flags()
 
   # Pods to be used in project
-  pod 'KlaviyoSwift'
+  pod 'KlaviyoSwift', '2.1.0-beta1'
 
   use_react_native!(
     :path => config[:reactNativePath],
@@ -51,7 +51,7 @@ target 'KlaviyoSwiftBridge' do
   target 'KlaviyoSwiftBridgeTests' do
     inherit! :complete
     # Pods for testing
-    pod 'KlaviyoSwift'
+    pod 'KlaviyoSwift', '2.1.0-beta1'
   end
 
   post_install do |installer|
