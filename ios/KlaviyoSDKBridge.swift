@@ -36,6 +36,54 @@ class KlaviyoSDKBridge : NSObject {
     print("KlaviyoSDKBridge :: customEventWithNameOnly :: ", eventName)
   }
   
+  @objc func openedPushEvent(){
+    
+  }
+  
+  @objc func viewedProducthEvent(){
+    
+  }
+  
+  @objc func searchedProductsEvent(){
+    
+  }
+  
+  @objc func startedCheckoutEvent(){
+    
+  }
+  
+  @objc func placedOrderEvent(){
+    
+  }
+  
+  @objc func cancelledOrderEvent(){
+    
+  }
+  
+  @objc func paidForOrderEvent(){
+    
+  }
+  
+  @objc func subscribedToBackInStockEvent(){
+    
+  }
+  
+  @objc func subscribedToComingSoonEvent(){
+    
+  }
+  
+  @objc func subscribedToListEvent(){
+    
+  }
+  
+  @objc func successfulPaymentEvent(){
+    
+  }
+  
+  @objc func failedPaymentEvent(){
+    
+  }
+  
   @objc func constantsToExport() -> [AnyHashable : Any]! {
     return [
       "ModuleName": "KlaviyoSDKBridge"
