@@ -26,7 +26,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Config from 'react-native-config';
-import {NativeModules} from 'react-native';
+import {NativeModules, Platform} from 'react-native';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -67,10 +67,13 @@ function Section({children, title}: SectionProps): JSX.Element {
 function App(): JSX.Element {
 
   useEffect(() => {
-    // Put your code here. It will be executed when the component is initially loaded.
-    NativeModules.KlaviyoSDKBridge.initialize(Config.KLAVIYO_API_KEY);
-    NativeModules.KlaviyoSDKBridge.setEmail("mike.svend@gmail.com");
-    NativeModules.KlaviyoSDKBridge.customEventWithNameOnly("Opened Application");
+    // check to see what platform we are on
+    if(Platform.OS === 'ios') {
+      NativeModules.KlaviyoSDKBridge.initialize(Config.KLAVIYO_API_KEY);
+      NativeModules.KlaviyoSDKBridge.setEmail("mike.svend@gmail.com");
+      NativeModules.KlaviyoSDKBridge.customEventWithNameOnly("Opened Application");
+    }
+
   }, []); 
 
   const isDarkMode = useColorScheme() === 'dark';
