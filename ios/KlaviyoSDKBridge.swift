@@ -36,6 +36,11 @@ class KlaviyoSDKBridge : NSObject {
     print("KlaviyoSDKBridge :: customEventWithNameOnly :: ", eventName)
   }
   
+  @objc func customEventWithNameAndProperties(_ eventName:String, properties:[String:Any]){
+    KlaviyoSDK().create(event: .init(name: .CustomEvent(eventName), properties: properties))
+    print("KlaviyoSDKBridge :: customEventWithNameAndProperties :: ", eventName)
+  }
+  
   @objc func openedPushEvent(){
     
   }

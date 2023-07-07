@@ -74,6 +74,12 @@ function App(): JSX.Element {
       NativeModules.KlaviyoSDKBridge.setPhoneNumber("1-416-710-6599");
       NativeModules.KlaviyoSDKBridge.setExternalID("123456789");
       NativeModules.KlaviyoSDKBridge.customEventWithNameOnly("Opened Application");
+
+      let properties = {
+        "screen": "landing"
+      }
+
+      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Viewed Screen", properties);
     }
 
   }, []); 

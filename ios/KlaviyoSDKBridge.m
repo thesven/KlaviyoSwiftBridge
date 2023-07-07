@@ -14,4 +14,6 @@ RCT_EXTERN_METHOD(setEmail: (NSString)address)
 RCT_EXTERN_METHOD(setPhoneNumber: (NSString)phoneNumber)
 RCT_EXTERN_METHOD(setExternalID: (NSString)externalID)
 RCT_EXTERN_METHOD(customEventWithNameOnly: (NSString*)eventName)
+RCT_EXTERN_METHOD(customEventWithNameAndProperties:(NSString *)eventName properties:(NSDictionary *)properties)
 @end
+
