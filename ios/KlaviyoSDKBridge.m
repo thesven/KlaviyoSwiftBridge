@@ -9,4 +9,5 @@
 #import "React/RCTBridgeModule.h"
 
 @interface RCT_EXTERN_MODULE(KlaviyoSDKBridge, NSObject)
+RCT_EXTERN_METHOD(initialize: (String)apiKey)
 @end

@@ -25,9 +25,18 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Config from 'react-native-config';
+import {NativeModules} from 'react-native';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
+
+//env file variables
+// const apiKey = Config.API_KEY;
+
+//testing KlaviyoSDKBridge
+console.log(NativeModules.KlaviyoSDKBridge)
 
 function Section({children, title}: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';

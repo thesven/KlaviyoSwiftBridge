@@ -6,9 +6,15 @@
 //
 
 import Foundation
+import KlaviyoSwift
 
 @objc(KlaviyoSDKBridge)
 class KlaviyoSDKBridge : NSObject {
+  
+  @objc func initialize(apiKey:String) {
+    Klaviyo.setupWithPublicAPIKey(apiKey: apiKey)
+    print("Klaviyo Init")
+  }
   
   @objc func constantsToExport() -> [AnyHashable : Any]! {
     return [
