@@ -21,14 +21,10 @@ class KlaviyoSDKBridge : NSObject {
     KlaviyoSDK().set(email: address)
   }
   
-  @objc func callEvent(_ eventName:String, properties:[String : Any]?) {
-    if let properties = properties {
-      KlaviyoSDK().create(event: .init(name: .CustomEvent(eventName), properties: properties))
-    } else {
-      print("KlaviyoSDKBridge :: callEvent :: Custom Event With Name")
-      KlaviyoSDK().create(event: .init(name: .CustomEvent(eventName)))
-    }
-    
+  @objc func customEventWithNameOnly(_ eventName:String) {
+    print("Type of: ", type(of: eventName))
+    KlaviyoSDK().create(event: .init(name: .CustomEvent(eventName)))
+    print("KlaviyoSDKBridge :: customEventWithNameOnly :: ", eventName)
   }
   
   @objc func constantsToExport() -> [AnyHashable : Any]! {

@@ -11,5 +11,5 @@
 @interface RCT_EXTERN_MODULE(KlaviyoSDKBridge, NSObject)
 RCT_EXTERN_METHOD(initialize: (NSString)apiKey)
 RCT_EXTERN_METHOD(setEmail: (NSString)address)
-RCT_EXTERN_METHOD(callEvent: (NSString)eventName ([NSSTring:Any])properties?)
+RCT_EXTERN_METHOD(customEventWithNameOnly: (NSString*)eventName)
 @end
