@@ -15,5 +15,5 @@ RCT_EXTERN_METHOD(setPhoneNumber: (NSString)phoneNumber)
 RCT_EXTERN_METHOD(setExternalID: (NSString)externalID)
 RCT_EXTERN_METHOD(customEventWithNameOnly: (NSString*)eventName)
 RCT_EXTERN_METHOD(customEventWithNameAndProperties:(NSString *)eventName properties:(NSDictionary *)properties)
+RCT_EXTERN_METHOD(showUIAlertController: (NSString *)title message:(NSString *)message actionTitle:(NSString *)actionTitle)
 @end
-

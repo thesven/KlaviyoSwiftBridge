@@ -80,6 +80,9 @@ function App(): JSX.Element {
       }
 
       NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Viewed Screen", properties);
+
+      //show a native alert
+      NativeModules.KlaviyoSDKBridge.showUIAlertController("Hello", "This is a test alert", "OK");
     }
 
   }, []); 

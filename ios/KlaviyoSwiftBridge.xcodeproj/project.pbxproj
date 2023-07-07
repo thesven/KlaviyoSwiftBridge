@@ -17,6 +17,8 @@
 		966FC0042A577EAC005604BD /* KlaviyoSDKBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FC0022A577EAC005604BD /* KlaviyoSDKBridge.swift */; };
 		966FC0062A577F2F005604BD /* KlaviyoSDKBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 966FC0052A577F2F005604BD /* KlaviyoSDKBridge.m */; };
 		966FC0072A577F2F005604BD /* KlaviyoSDKBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 966FC0052A577F2F005604BD /* KlaviyoSDKBridge.m */; };
+		96B1FE3D2A58AC6200B45BE1 /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1FE3C2A58ABCD00B45BE1 /* ViewControllerPresenter.swift */; };
+		96B1FE3E2A58AC6300B45BE1 /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1FE3C2A58ABCD00B45BE1 /* ViewControllerPresenter.swift */; };
 		A09441D359D7611BDAFB4641 /* libPods-KlaviyoSwiftBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4AB597536A3198346CBF4C /* libPods-KlaviyoSwiftBridge.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,7 @@
 		966FC0022A577EAC005604BD /* KlaviyoSDKBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlaviyoSDKBridge.swift; sourceTree = "<group>"; };
 		966FC0052A577F2F005604BD /* KlaviyoSDKBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KlaviyoSDKBridge.m; sourceTree = "<group>"; };
 		96AED1122A57B17F00118070 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
+		96B1FE3C2A58ABCD00B45BE1 /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
 		CC56907AE37C3FA280364753 /* Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig"; path = "Target Support Files/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests/Pods-KlaviyoSwiftBridge-KlaviyoSwiftBridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6AF52059609AF3DDF4D5208 /* Pods-KlaviyoSwiftBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlaviyoSwiftBridge.debug.xcconfig"; path = "Target Support Files/Pods-KlaviyoSwiftBridge/Pods-KlaviyoSwiftBridge.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -110,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				966FC0022A577EAC005604BD /* KlaviyoSDKBridge.swift */,
+				96B1FE3C2A58ABCD00B45BE1 /* ViewControllerPresenter.swift */,
 				966FC0052A577F2F005604BD /* KlaviyoSDKBridge.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -470,6 +474,7 @@
 				966FC0072A577F2F005604BD /* KlaviyoSDKBridge.m in Sources */,
 				00E356F31AD99517003FC87E /* KlaviyoSwiftBridgeTests.m in Sources */,
 				966FC0042A577EAC005604BD /* KlaviyoSDKBridge.swift in Sources */,
+				96B1FE3E2A58AC6300B45BE1 /* ViewControllerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +485,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				966FC0062A577F2F005604BD /* KlaviyoSDKBridge.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				96B1FE3D2A58AC6200B45BE1 /* ViewControllerPresenter.swift in Sources */,
 				966FC0032A577EAC005604BD /* KlaviyoSDKBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

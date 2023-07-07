@@ -89,6 +89,24 @@ class KlaviyoSDKBridge : NSObject {
     
   }
   
+  //non klaviyo related functions
+  
+  @objc func showUIAlertController(_ title:String, message:String, actionTitle:String){
+    let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .actionSheet)
+    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    alertController.addAction(okAction)
+
+    if var topController = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController {
+        while let presentedViewController = topController.presentedViewController {
+            topController = presentedViewController
+        }
+
+        ViewControllerPresenter.shared.present(alertController, on: topController, animated: true, completion: nil)
+    }
+  }
+  
+  //////////////////////////////////////////////////////////////////
+  
   @objc func constantsToExport() -> [AnyHashable : Any]! {
     return [
       "ModuleName": "KlaviyoSDKBridge"
