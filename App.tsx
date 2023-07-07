@@ -71,6 +71,8 @@ function App(): JSX.Element {
     if(Platform.OS === 'ios') {
       NativeModules.KlaviyoSDKBridge.initialize(Config.KLAVIYO_API_KEY);
       NativeModules.KlaviyoSDKBridge.setEmail("mike.svend@gmail.com");
+      NativeModules.KlaviyoSDKBridge.setPhoneNumber("1-416-710-6599");
+      NativeModules.KlaviyoSDKBridge.setExternalID("123456789");
       NativeModules.KlaviyoSDKBridge.customEventWithNameOnly("Opened Application");
     }
 

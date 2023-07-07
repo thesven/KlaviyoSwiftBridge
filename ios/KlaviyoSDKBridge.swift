@@ -21,8 +21,17 @@ class KlaviyoSDKBridge : NSObject {
     KlaviyoSDK().set(email: address)
   }
   
+  @objc func setPhoneNumber(_ phoneNumber:String) {
+    print("KlaviyoSDKBridge :: setPhoneNumber :: ", phoneNumber)
+    KlaviyoSDK().set(phoneNumber: phoneNumber)
+  }
+  
+  @objc func setExternalID(_ externalID:String) {
+    print("KlaviyoSDKBridge :: setExternalID :: ", externalID)
+    KlaviyoSDK().set(externalId: externalID)
+  }
+  
   @objc func customEventWithNameOnly(_ eventName:String) {
-    print("Type of: ", type(of: eventName))
     KlaviyoSDK().create(event: .init(name: .CustomEvent(eventName)))
     print("KlaviyoSDKBridge :: customEventWithNameOnly :: ", eventName)
   }
