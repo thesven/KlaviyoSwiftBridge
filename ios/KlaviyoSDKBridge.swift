@@ -92,7 +92,7 @@ class KlaviyoSDKBridge : NSObject {
   //non klaviyo related functions
   
   @objc func showUIAlertController(_ title:String, message:String, actionTitle:String){
-    let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .actionSheet)
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
     let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
     alertController.addAction(okAction)
 

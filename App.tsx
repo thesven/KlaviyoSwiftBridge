@@ -53,7 +53,7 @@ function TabScreenOne() {
     // Simple validation check for email pattern
     const emailPattern = /\S+@\S+\.\S+/;
     if (!emailPattern.test(email)) {
-      NativeModules.KlaviyoSDKBridge.showUIAlertController("Error", "Invlide Email", "FIX");
+      NativeModules.KlaviyoSDKBridge.showUIAlertController("Error", "Invlid Email", "FIX");
     } else {
       NativeModules.KlaviyoSDKBridge.setEmail(`${email}`);
       let properties = {
