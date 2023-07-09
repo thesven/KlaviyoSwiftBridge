@@ -5,62 +5,108 @@
  * @format
  */
 
-import React, {useEffect} from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
+import React, { useEffect, useState } from 'react';
+import { 
+  NativeModules, 
+  Platform, 
+  SafeAreaView, 
+  StatusBar, 
   useColorScheme,
-  View,
+  View, 
+  Text, 
+  TextInput, 
+  Button, 
+  StyleSheet,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Config from 'react-native-config';
-import {NativeModules, Platform} from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { enableScreens } from 'react-native-screens';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
 
-//env file variables
-// const apiKey = Config.API_KEY;
+enableScreens();
+
+const Tab = createBottomTabNavigator();
 
 //testing KlaviyoSDKBridge
 console.log(NativeModules.KlaviyoSDKBridge)
 
-function Section({children, title}: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+function TabScreenOne() {
+
+  const [email, setEmail] = useState('');  // State to hold email input
+
+  useEffect(() => {
+    // check to see what platform we are on
+    if(Platform.OS === 'ios') {
+      let properties = {
+        "screen-viewed": "TabScreenOne",
+      }
+      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Viewed Screen:", properties);
+    }
+
+  }, []);
+
+  // Function to handle submission
+  const handleSubmit = () => {
+    // Simple validation check for email pattern
+    const emailPattern = /\S+@\S+\.\S+/;
+    if (!emailPattern.test(email)) {
+      NativeModules.KlaviyoSDKBridge.showUIAlertController("Error", "Invlide Email", "FIX");
+    } else {
+      NativeModules.KlaviyoSDKBridge.setEmail(`${email}`);
+      let properties = {
+        "email-updated": `${email}`,
+      }
+      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Email Updated", properties);
+      NativeModules.KlaviyoSDKBridge.showUIAlertController("Success", "Email Updated", "OK");
+      setEmail('');  // Clear the input
+    }
+  }
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      padding: 20,
+    },
+    label: {
+      fontSize: 20,
+      marginBottom: 10,
+    },
+    input: {
+      height: 40,
+      borderColor: 'gray',
+      borderWidth: 1,
+      marginBottom: 20,
+      padding: 10,
+    },
+  });
+
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View>
+        <Text style={styles.label}>Email:</Text>
+        <TextInput
+          style={styles.input}
+          value={email}
+          onChangeText={text => setEmail(text)} // Update email state when input changes
+          placeholder="Enter your email"
+          keyboardType="email-address"
+          autoCapitalize="none"
+        />
+        <Button title="Submit" onPress={handleSubmit} />
+      </View>
+    </SafeAreaView>
+  );
+};
+
+function TabScreenTwo() {
+  return (
+    <SafeAreaView>
+      
+    </SafeAreaView>
   );
 }
 
@@ -70,19 +116,9 @@ function App(): JSX.Element {
     // check to see what platform we are on
     if(Platform.OS === 'ios') {
       NativeModules.KlaviyoSDKBridge.initialize(Config.KLAVIYO_API_KEY);
-      NativeModules.KlaviyoSDKBridge.setEmail("mike.svend@gmail.com");
       NativeModules.KlaviyoSDKBridge.setPhoneNumber("1-416-710-6599");
       NativeModules.KlaviyoSDKBridge.setExternalID("123456789");
       NativeModules.KlaviyoSDKBridge.customEventWithNameOnly("Opened Application");
-
-      let properties = {
-        "screen": "landing"
-      }
-
-      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Viewed Screen", properties);
-
-      //show a native alert
-      NativeModules.KlaviyoSDKBridge.showUIAlertController("Hello", "This is a test alert", "OK");
     }
 
   }, []); 
@@ -94,56 +130,17 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <NavigationContainer>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+      <Tab.Navigator>
+        <Tab.Screen name="Tab One" component={TabScreenOne} />
+        <Tab.Screen name="Tab Two" component={TabScreenTwo} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
