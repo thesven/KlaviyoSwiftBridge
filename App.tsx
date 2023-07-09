@@ -103,12 +103,57 @@ function TabScreenOne() {
 };
 
 function TabScreenTwo() {
+  const [phoneNumber, setPhoneNumber] = useState('');  // State to hold phone number input
+
+  // Function to handle submission
+  const handleSubmit = () => {
+    // Simple validation check for phone number pattern
+    const phoneNumberPattern = /^[0-9]+$/;
+    if (!phoneNumberPattern.test(phoneNumber)) {
+      NativeModules.KlaviyoSDKBridge.showUIAlertController("Error", "Invalid Phone Number", "FIX");
+    } else {
+      NativeModules.KlaviyoSDKBridge.setPhoneNumber(`${phoneNumber}`);
+      let properties = {
+        "phone-updated": `${phoneNumber}`,
+      }
+      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Phone Number Updated", properties);
+      NativeModules.KlaviyoSDKBridge.showUIAlertController("Success", "Phone Number Updated", "OK");
+    }
+  }
+
   return (
-    <SafeAreaView>
-      
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.label}>Phone Number:</Text>
+      <TextInput
+        style={styles.input}
+        value={phoneNumber}
+        onChangeText={text => setPhoneNumber(text)} // Update phone number state when input changes
+        placeholder="Enter your phone number"
+        keyboardType="phone-pad"
+      />
+      <Button title="Submit" onPress={handleSubmit} /> 
     </SafeAreaView>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
+  },
+  label: {
+    fontSize: 20,
+    marginBottom: 10,
+  },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 20,
+    padding: 10,
+  },
+});
 
 function App(): JSX.Element {
 
@@ -136,8 +181,8 @@ function App(): JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <Tab.Navigator>
-        <Tab.Screen name="Tab One" component={TabScreenOne} />
-        <Tab.Screen name="Tab Two" component={TabScreenTwo} />
+        <Tab.Screen name="Email" component={TabScreenOne} />
+        <Tab.Screen name="Phone" component={TabScreenTwo} />
       </Tab.Navigator>
     </NavigationContainer>
   );
