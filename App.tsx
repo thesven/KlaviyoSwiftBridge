@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React, { useEffect, useState } from 'react';
 import { 
   NativeModules, 
@@ -25,15 +18,14 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { enableScreens } from 'react-native-screens';
 
-
 enableScreens();
 
 const Tab = createBottomTabNavigator();
 
 //testing KlaviyoSDKBridge
-console.log(NativeModules.KlaviyoSDKBridge)
+console.log(NativeModules.KlaviyoSDKBridge);
 
-function TabScreenOne() {
+const TabScreenOne = () => {
 
   const [email, setEmail] = useState('');  // State to hold email input
 
@@ -41,7 +33,7 @@ function TabScreenOne() {
     // check to see what platform we are on
     if(Platform.OS === 'ios') {
       let properties = {
-        "screen-viewed": "TabScreenOne",
+        "screen-viewed": "Email Update",
       }
       NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Viewed Screen:", properties);
     }
@@ -102,8 +94,19 @@ function TabScreenOne() {
   );
 };
 
-function TabScreenTwo() {
+const TabScreenTwo = () => {
   const [phoneNumber, setPhoneNumber] = useState('');  // State to hold phone number input
+
+  useEffect(() => {
+    // check to see what platform we are on
+    if(Platform.OS === 'ios') {
+      let properties = {
+        "screen-viewed": "Update Phone Number",
+      }
+      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Viewed Screen:", properties);
+    }
+
+  }, []);
 
   // Function to handle submission
   const handleSubmit = () => {
@@ -155,14 +158,12 @@ const styles = StyleSheet.create({
   },
 });
 
-function App(): JSX.Element {
+const App = (): JSX.Element => {
 
   useEffect(() => {
     // check to see what platform we are on
     if(Platform.OS === 'ios') {
       NativeModules.KlaviyoSDKBridge.initialize(Config.KLAVIYO_API_KEY);
-      NativeModules.KlaviyoSDKBridge.setPhoneNumber("1-416-710-6599");
-      NativeModules.KlaviyoSDKBridge.setExternalID("123456789");
       NativeModules.KlaviyoSDKBridge.customEventWithNameOnly("Opened Application");
     }
 
