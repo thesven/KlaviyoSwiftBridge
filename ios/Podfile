@@ -32,7 +32,7 @@ target 'KlaviyoSwiftBridge' do
   flags = get_default_flags()
 
   # Pods to be used in project
-  pod 'KlaviyoSwift', '2.1.0-beta1'
+  pod 'KlaviyoSwift',
 
   use_react_native!(
     :path => config[:reactNativePath],
@@ -51,7 +51,7 @@ target 'KlaviyoSwiftBridge' do
   target 'KlaviyoSwiftBridgeTests' do
     inherit! :complete
     # Pods for testing
-    pod 'KlaviyoSwift', '2.1.0-beta1'
+    pod 'KlaviyoSwift'
   end
 
   post_install do |installer|

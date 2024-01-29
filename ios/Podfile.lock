@@ -74,7 +74,7 @@ PODS:
   - hermes-engine (0.72.1):
     - hermes-engine/Pre-built (= 0.72.1)
   - hermes-engine/Pre-built (0.72.1)
-  - KlaviyoSwift (2.1.0-beta1):
+  - KlaviyoSwift (3.0.1):
     - AnyCodable-FlightSchool
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.1100)
@@ -532,7 +532,7 @@ DEPENDENCIES:
   - FlipperKit/SKIOSNetworkPlugin (= 0.182.0)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
-  - KlaviyoSwift (= 2.1.0-beta1)
+  - KlaviyoSwift
   - libevent (~> 2.1.12)
   - OpenSSL-Universal (= 1.1.1100)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
@@ -698,7 +698,7 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: 9df83855a0fd15ef8eb61694652bae636b0c466e
-  KlaviyoSwift: e05204b409a6464dcdb29ec2d67da8daacdeec31
+  KlaviyoSwift: 6e60d72194b12995f6326b8abac0598c9a58e462
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
@@ -740,6 +740,6 @@ SPEC CHECKSUMS:
   Yoga: 65286bb6a07edce5e4fe8c90774da977ae8fc009
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: da87d33649db18887c6f07ebb792bef2ac02d210
+PODFILE CHECKSUM: 4f0f9c0cd375673425939448062cb50ab92eddf9
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.14.3

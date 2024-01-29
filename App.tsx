@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { 
-  NativeModules, 
-  Platform, 
-  SafeAreaView, 
-  StatusBar, 
+import React, {useEffect, useState} from 'react';
+import {
+  NativeModules,
+  Platform,
+  SafeAreaView,
+  StatusBar,
   useColorScheme,
-  View, 
-  Text, 
-  TextInput, 
-  Button, 
+  View,
+  Text,
+  TextInput,
+  Button,
   StyleSheet,
 } from 'react-native';
 
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Config from 'react-native-config';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
-import { enableScreens } from 'react-native-screens';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {NavigationContainer} from '@react-navigation/native';
+import {enableScreens} from 'react-native-screens';
 
+NativeModules.KlaviyoSDKBridge.initialize(Config.KLAVIYO_API_KEY);
 enableScreens();
 
 const Tab = createBottomTabNavigator();
@@ -26,18 +27,19 @@ const Tab = createBottomTabNavigator();
 console.log(NativeModules.KlaviyoSDKBridge);
 
 const TabScreenOne = () => {
-
-  const [email, setEmail] = useState('');  // State to hold email input
+  const [email, setEmail] = useState(''); // State to hold email input
 
   useEffect(() => {
     // check to see what platform we are on
-    if(Platform.OS === 'ios') {
+    if (Platform.OS === 'ios') {
       let properties = {
-        "screen-viewed": "Email Update",
-      }
-      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Viewed Screen:", properties);
+        'screen-viewed': 'Email Update',
+      };
+      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties(
+        'Viewed Screen:',
+        properties,
+      );
     }
-
   }, []);
 
   // Function to handle submission
@@ -45,17 +47,28 @@ const TabScreenOne = () => {
     // Simple validation check for email pattern
     const emailPattern = /\S+@\S+\.\S+/;
     if (!emailPattern.test(email)) {
-      NativeModules.KlaviyoSDKBridge.showUIAlertController("Error", "Invlid Email", "FIX");
+      NativeModules.KlaviyoSDKBridge.showUIAlertController(
+        'Error',
+        'Invlid Email',
+        'FIX',
+      );
     } else {
       NativeModules.KlaviyoSDKBridge.setEmail(`${email}`);
       let properties = {
-        "email-updated": `${email}`,
-      }
-      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Email Updated", properties);
-      NativeModules.KlaviyoSDKBridge.showUIAlertController("Success", "Email Updated", "OK");
-      setEmail('');  // Clear the input
+        'email-updated': `${email}`,
+      };
+      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties(
+        'Email Updated',
+        properties,
+      );
+      NativeModules.KlaviyoSDKBridge.showUIAlertController(
+        'Success',
+        'Email Updated',
+        'OK',
+      );
+      setEmail(''); // Clear the input
     }
-  }
+  };
 
   const styles = StyleSheet.create({
     container: {
@@ -95,17 +108,19 @@ const TabScreenOne = () => {
 };
 
 const TabScreenTwo = () => {
-  const [phoneNumber, setPhoneNumber] = useState('');  // State to hold phone number input
+  const [phoneNumber, setPhoneNumber] = useState(''); // State to hold phone number input
 
   useEffect(() => {
     // check to see what platform we are on
-    if(Platform.OS === 'ios') {
+    if (Platform.OS === 'ios') {
       let properties = {
-        "screen-viewed": "Update Phone Number",
-      }
-      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Viewed Screen:", properties);
+        'screen-viewed': 'Update Phone Number',
+      };
+      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties(
+        'Viewed Screen:',
+        properties,
+      );
     }
-
   }, []);
 
   // Function to handle submission
@@ -113,16 +128,27 @@ const TabScreenTwo = () => {
     // Simple validation check for phone number pattern
     const phoneNumberPattern = /^[0-9]+$/;
     if (!phoneNumberPattern.test(phoneNumber)) {
-      NativeModules.KlaviyoSDKBridge.showUIAlertController("Error", "Invalid Phone Number", "FIX");
+      NativeModules.KlaviyoSDKBridge.showUIAlertController(
+        'Error',
+        'Invalid Phone Number',
+        'FIX',
+      );
     } else {
       NativeModules.KlaviyoSDKBridge.setPhoneNumber(`${phoneNumber}`);
       let properties = {
-        "phone-updated": `${phoneNumber}`,
-      }
-      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties("Phone Number Updated", properties);
-      NativeModules.KlaviyoSDKBridge.showUIAlertController("Success", "Phone Number Updated", "OK");
+        'phone-updated': `${phoneNumber}`,
+      };
+      NativeModules.KlaviyoSDKBridge.customEventWithNameAndProperties(
+        'Phone Number Updated',
+        properties,
+      );
+      NativeModules.KlaviyoSDKBridge.showUIAlertController(
+        'Success',
+        'Phone Number Updated',
+        'OK',
+      );
     }
-  }
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -134,7 +160,7 @@ const TabScreenTwo = () => {
         placeholder="Enter your phone number"
         keyboardType="phone-pad"
       />
-      <Button title="Submit" onPress={handleSubmit} /> 
+      <Button title="Submit" onPress={handleSubmit} />
     </SafeAreaView>
   );
 };
@@ -159,15 +185,14 @@ const styles = StyleSheet.create({
 });
 
 const App = (): JSX.Element => {
-
   useEffect(() => {
     // check to see what platform we are on
-    if(Platform.OS === 'ios') {
-      NativeModules.KlaviyoSDKBridge.initialize(Config.KLAVIYO_API_KEY);
-      NativeModules.KlaviyoSDKBridge.customEventWithNameOnly("Opened Application");
+    if (Platform.OS === 'ios') {
+      NativeModules.KlaviyoSDKBridge.customEventWithNameOnly(
+        'Opened Application',
+      );
     }
-
-  }, []); 
+  }, []);
 
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -187,6 +212,6 @@ const App = (): JSX.Element => {
       </Tab.Navigator>
     </NavigationContainer>
   );
-}
+};
 
 export default App;
